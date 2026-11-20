@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="style.css" />
@@ -15,7 +15,7 @@
 <body>
   <header class="site-header">
     <div class="container nav-inner">
-      <a href="#top" class="brand">Rajashekar Jillella</a>
+      <a href="#top" class="brand">Rajashekar<span>.dev</span></a>
       <nav class="nav-links" aria-label="Primary">
         <a href="#work">Work</a>
         <a href="#experience">Experience</a>
@@ -27,67 +27,75 @@
 
   <main id="top">
     <section class="hero">
-      <div class="container hero-inner">
-        <p class="eyebrow">Hyderabad, India &middot; AWS &amp; GCP</p>
-        <h1>DevOps &amp; Cloud Engineer focused on reliable delivery, GitOps, and cloud cost efficiency.</h1>
-        <p class="hero-copy">
-          I build and streamline cloud infrastructure across AWS and GCP&mdash;turning manual deployments into
-          repeatable pipelines, adding pre-merge security checks, improving observability, and cutting wasted cloud spend.
-        </p>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Hyderabad, India &middot; AWS &amp; GCP</p>
+          <h1>DevOps &amp; Cloud Engineer building reliable platforms &amp; cost-smart delivery.</h1>
+          <p class="hero-copy">
+            I help teams automate infrastructure and releases across AWS and GCP&mdash;combining GitOps on Kubernetes,
+            shift-left security checks, actionable observability, and practical FinOps.
+          </p>
 
-        <div class="hero-actions">
-          <a href="#work" class="btn btn-primary">View Key Work</a>
-          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">Explore Work</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+
+          <div class="highlights-strip" aria-label="Key Highlights">
+            <div class="highlight-item">
+              <span class="highlight-value">AWS &amp; GCP</span>
+              <span class="highlight-label">Cloud FinOps &amp; right-sizing</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-value">ArgoCD</span>
+              <span class="highlight-label">EKS &amp; GKE GitOps rollouts</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-value">45m &rarr; 8m</span>
+              <span class="highlight-label">Observability &amp; faster MTTR</span>
+            </div>
+          </div>
         </div>
 
-        <div class="highlights-strip" aria-label="Key Engineering Highlights">
-          <div class="highlight-item">
-            <span class="highlight-value">AWS &amp; GCP</span>
-            <span class="highlight-label">Multi-cloud FinOps &amp; right-sizing</span>
+        <div class="hero-media">
+          <div class="portrait-frame">
+            <img src="profile.jpg" alt="Rajashekar Jillella, DevOps and Cloud Engineer" />
           </div>
-          <div class="highlight-item">
-            <span class="highlight-value">GitOps</span>
-            <span class="highlight-label">EKS / GKE + ArgoCD rollouts</span>
-          </div>
-          <div class="highlight-item">
-            <span class="highlight-value">Shift-Left</span>
-            <span class="highlight-label">Trivy, Checkov &amp; SonarQube gates</span>
-          </div>
-          <div class="highlight-item">
-            <span class="highlight-value">45m &rarr; 8m</span>
-            <span class="highlight-label">Actionable alerts &amp; faster MTTR</span>
+          <div class="portrait-caption">
+            <strong>Rajashekar Jillella</strong>
+            <span>Cloud &amp; DevOps Engineer</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section workflow-section" aria-label="Delivery and Operations Flow">
+    <section class="section workflow-section" aria-label="Delivery Workflow">
       <div class="container">
         <div class="section-head">
-          <h2>How I Structure Delivery &amp; Operations</h2>
-          <p>Repeatable infrastructure, automated security checks, declarative rollouts, and practical signals.</p>
+          <h2>Delivery &amp; Operations Flow</h2>
+          <p>How infrastructure, security checks, deployments, and monitoring fit together.</p>
         </div>
 
         <div class="flow-grid">
           <div class="flow-step">
             <span class="flow-num">01</span>
-            <h3>Provision (IaC)</h3>
-            <p>Reusable Terraform &amp; Ansible modules with Python wrappers to prevent drift.</p>
+            <h3>Provision</h3>
+            <p>Terraform &amp; Ansible modules with Python wrappers for repeatable setups.</p>
           </div>
           <div class="flow-step">
             <span class="flow-num">02</span>
-            <h3>Verify (Guardrails)</h3>
-            <p>Pull-request scans with Trivy, Checkov, and SonarQube before code merges.</p>
+            <h3>Verify</h3>
+            <p>Trivy, Checkov, and SonarQube checks enforced on pull requests.</p>
           </div>
           <div class="flow-step">
             <span class="flow-num">03</span>
-            <h3>Ship (GitOps)</h3>
-            <p>Containerized builds delivered to Kubernetes (EKS/GKE) via ArgoCD.</p>
+            <h3>Ship</h3>
+            <p>Declarative GitOps rollouts to EKS and GKE clusters via ArgoCD.</p>
           </div>
           <div class="flow-step">
             <span class="flow-num">04</span>
-            <h3>Observe (SRE &amp; FinOps)</h3>
-            <p>High-signal Datadog, Grafana, and Prometheus alerts paired with cost audits.</p>
+            <h3>Observe</h3>
+            <p>High-signal Datadog, Grafana, and Prometheus alerts plus cost reviews.</p>
           </div>
         </div>
       </div>
@@ -96,8 +104,8 @@
     <section id="work" class="section">
       <div class="container">
         <div class="section-head">
-          <h2>Selected Work &amp; Outcomes</h2>
-          <p>Practical engineering improvements across cloud cost, release flow, security, and reliability.</p>
+          <h2>Selected Work</h2>
+          <p>Key outcomes across cloud cost optimization, GitOps delivery, security, and SRE.</p>
         </div>
 
         <div class="work-grid">
