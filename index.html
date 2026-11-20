@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rajashekar Jillella — DevOps &amp; Cloud Engineer</title>
-  <meta name="description" content="Portfolio of Rajashekar Jillella: AWS & GCP infrastructure, Kubernetes & ArgoCD GitOps, FinOps cost optimization, IaC, and SRE observability." />
+  <title>Rajashekar Jillella | DevOps &amp; Cloud Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="container nav-row">
+    <div class="container nav-inner">
       <a href="#top" class="brand">Rajashekar Jillella</a>
-      <nav aria-label="Primary">
+      <nav class="nav-links" aria-label="Primary">
         <a href="#work">Work</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
@@ -22,16 +27,68 @@
 
   <main id="top">
     <section class="hero">
-      <div class="container">
+      <div class="container hero-inner">
         <p class="eyebrow">Hyderabad, India &middot; AWS &amp; GCP</p>
         <h1>DevOps &amp; Cloud Engineer focused on reliable delivery, GitOps, and cloud cost efficiency.</h1>
-        <p class="lead">
-          I build and streamline cloud infrastructure across AWS and GCP—turning manual deployments into repeatable
-          pipelines, adding pre-merge security checks, improving observability, and cutting wasted cloud spend.
+        <p class="hero-copy">
+          I build and streamline cloud infrastructure across AWS and GCP&mdash;turning manual deployments into
+          repeatable pipelines, adding pre-merge security checks, improving observability, and cutting wasted cloud spend.
         </p>
-        <div class="actions">
-          <a href="#work" class="btn primary">View Key Work</a>
-          <a href="#contact" class="btn secondary">Get in Touch</a>
+
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">View Key Work</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
+
+        <div class="highlights-strip" aria-label="Key Engineering Highlights">
+          <div class="highlight-item">
+            <span class="highlight-value">AWS &amp; GCP</span>
+            <span class="highlight-label">Multi-cloud FinOps &amp; right-sizing</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-value">GitOps</span>
+            <span class="highlight-label">EKS / GKE + ArgoCD rollouts</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-value">Shift-Left</span>
+            <span class="highlight-label">Trivy, Checkov &amp; SonarQube gates</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-value">45m &rarr; 8m</span>
+            <span class="highlight-label">Actionable alerts &amp; faster MTTR</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section workflow-section" aria-label="Delivery and Operations Flow">
+      <div class="container">
+        <div class="section-head">
+          <h2>How I Structure Delivery &amp; Operations</h2>
+          <p>Repeatable infrastructure, automated security checks, declarative rollouts, and practical signals.</p>
+        </div>
+
+        <div class="flow-grid">
+          <div class="flow-step">
+            <span class="flow-num">01</span>
+            <h3>Provision (IaC)</h3>
+            <p>Reusable Terraform &amp; Ansible modules with Python wrappers to prevent drift.</p>
+          </div>
+          <div class="flow-step">
+            <span class="flow-num">02</span>
+            <h3>Verify (Guardrails)</h3>
+            <p>Pull-request scans with Trivy, Checkov, and SonarQube before code merges.</p>
+          </div>
+          <div class="flow-step">
+            <span class="flow-num">03</span>
+            <h3>Ship (GitOps)</h3>
+            <p>Containerized builds delivered to Kubernetes (EKS/GKE) via ArgoCD.</p>
+          </div>
+          <div class="flow-step">
+            <span class="flow-num">04</span>
+            <h3>Observe (SRE &amp; FinOps)</h3>
+            <p>High-signal Datadog, Grafana, and Prometheus alerts paired with cost audits.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -43,14 +100,20 @@
           <p>Practical engineering improvements across cloud cost, release flow, security, and reliability.</p>
         </div>
 
-        <div class="grid">
+        <div class="work-grid">
           <article class="card">
             <h3>Cloud FinOps &amp; Cost Reduction</h3>
             <p>
               Audited over-provisioned AWS and GCP workloads, right-sized instances, used reserved capacity where it
               made sense, and shifted suitable components to serverless options like Lambda and Cloud Run.
             </p>
-            <p class="meta"><strong>Stack:</strong> AWS, GCP, Lambda, Cloud Run, Autoscaling</p>
+            <ul class="tag-list">
+              <li>AWS</li>
+              <li>GCP</li>
+              <li>Lambda</li>
+              <li>Cloud Run</li>
+              <li>Autoscaling</li>
+            </ul>
           </article>
 
           <article class="card">
@@ -59,7 +122,14 @@
               Moved teams away from brittle scripts and legacy Jenkins setups toward Kubernetes (EKS/GKE) with ArgoCD,
               Git/Bitbucket workflows, Maven/Docker builds, and zero-downtime rollbacks.
             </p>
-            <p class="meta"><strong>Stack:</strong> ArgoCD, Kubernetes, Jenkins, Docker, Git, Bitbucket</p>
+            <ul class="tag-list">
+              <li>ArgoCD</li>
+              <li>Kubernetes</li>
+              <li>Jenkins</li>
+              <li>Docker</li>
+              <li>Git</li>
+              <li>Bitbucket</li>
+            </ul>
           </article>
 
           <article class="card">
@@ -68,16 +138,26 @@
               Built pull-request checks with Trivy for container scanning and Checkov for Infrastructure as Code,
               alongside SonarQube code quality checks, catching issues before merge.
             </p>
-            <p class="meta"><strong>Stack:</strong> Trivy, Checkov, SonarQube, CI/CD</p>
+            <ul class="tag-list">
+              <li>Trivy</li>
+              <li>Checkov</li>
+              <li>SonarQube</li>
+              <li>CI/CD</li>
+            </ul>
           </article>
 
           <article class="card">
             <h3>IaC &amp; Self-Service Provisioning</h3>
             <p>
-              Created reusable Terraform and Ansible modules—paired with lightweight Python wrappers—so teams could
-              spin up consistent environments without manual drift.
+              Created reusable Terraform and Ansible modules&mdash;paired with lightweight Python wrappers&mdash;so teams
+              could spin up consistent environments without manual drift.
             </p>
-            <p class="meta"><strong>Stack:</strong> Terraform, Ansible, Python, Linux</p>
+            <ul class="tag-list">
+              <li>Terraform</li>
+              <li>Ansible</li>
+              <li>Python</li>
+              <li>Linux</li>
+            </ul>
           </article>
 
           <article class="card">
@@ -86,68 +166,66 @@
               Refined Datadog, Grafana, and Prometheus setups from noisy alerts to practical metrics and scaling
               signals, helping cut MTTR (for example, from 45 minutes down to 8 minutes).
             </p>
-            <p class="meta"><strong>Stack:</strong> Datadog, Grafana, Prometheus, SRE</p>
+            <ul class="tag-list">
+              <li>Datadog</li>
+              <li>Grafana</li>
+              <li>Prometheus</li>
+              <li>SRE</li>
+            </ul>
           </article>
 
           <article class="card">
             <h3>Infrastructure &amp; Platform Roots</h3>
             <p>
-              Started in Tier 2 system administration (Cherwell, Citrix, Active Directory, VMware) before moving
-              into Linux server operations, CI/CD scripting, and cloud engineering.
+              Started in Tier 2 system administration (Cherwell, Citrix, Active Directory, VMware) before moving into
+              Linux server operations, CI/CD scripting, and cloud engineering.
             </p>
-            <p class="meta"><strong>Stack:</strong> Linux, Windows, Shell, Groovy, VMware</p>
+            <ul class="tag-list">
+              <li>Linux</li>
+              <li>Windows</li>
+              <li>Shell</li>
+              <li>Groovy</li>
+              <li>VMware</li>
+            </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="section alt-bg">
+    <section id="experience" class="section section-alt">
       <div class="container">
         <div class="section-head">
           <h2>Experience</h2>
         </div>
 
         <div class="timeline">
-          <div class="role">
-            <div class="role-top">
+          <div class="timeline-item">
+            <div class="timeline-meta">
               <h3>Cloud &amp; DevOps Strategy Consultant (Self-Employed)</h3>
               <span>03/2024 &ndash; Present &middot; Hyderabad</span>
             </div>
             <p>
               Led AWS and GCP FinOps cost audits, migrated Jenkins workflows to ArgoCD on GKE/EKS, added Trivy and
               Checkov checks in pull requests, built Terraform/Ansible modules with Python wrappers, and tuned
-              Datadog, Grafana, and Prometheus observability.
+              Datadog/Grafana/Prometheus alerting.
             </p>
           </div>
 
-          <div class="role">
-            <div class="role-top">
+          <div class="timeline-item">
+            <div class="timeline-meta">
               <h3>DevOps &amp; Cloud Engineer &mdash; Delivery Hero India Services (Tabsquare.ai)</h3>
               <span>08/2022 &ndash; 03/2024 &middot; Bengaluru</span>
             </div>
             <p>
-              Managed Bitbucket branching and PR flows, maintained Jenkins and Maven pipelines with Docker, built
-              reusable Terraform modules on GCP, and set up monitoring, autoscaling, rightsizing, and encryption in
-              transit and at rest for restaurant applications.
+              Supported cloud and delivery workflows across Linux and Kubernetes environments, automated build and
+              deployment steps, and collaborated with engineering teams on reliability and release stability.
             </p>
           </div>
 
-          <div class="role">
-            <div class="role-top">
-              <h3>DevOps Engineer &mdash; Wipro Limited</h3>
-              <span>11/2020 &ndash; 08/2022 &middot; Hyderabad</span>
-            </div>
-            <p>
-              Supported Git workflows and Jenkins pipelines using Groovy and Shell scripts, standardized Maven and
-              Docker builds, maintained Linux servers on AWS for a global insurance platform, and helped with
-              SonarQube checks and AWS cost reviews.
-            </p>
-          </div>
-
-          <div class="role">
-            <div class="role-top">
-              <h3>System Administrator &mdash; Sutherland Global Services</h3>
-              <span>08/2017 &ndash; 12/2019 &middot; Hyderabad</span>
+          <div class="timeline-item">
+            <div class="timeline-meta">
+              <h3>Earlier Systems &amp; Infrastructure Roles</h3>
+              <span>Prior to 08/2022</span>
             </div>
             <p>
               Handled Tier 2 escalations and SLA-driven tickets in Cherwell, resolved Citrix access issues, fixed
@@ -165,21 +243,57 @@
         </div>
 
         <div class="skills-grid">
-          <div>
+          <div class="skill-group">
             <h3>Cloud &amp; Containers</h3>
-            <p>AWS, GCP, Docker, Kubernetes (EKS/GKE), Linux, Windows</p>
+            <ul class="tag-list">
+              <li>AWS</li>
+              <li>GCP</li>
+              <li>Docker</li>
+              <li>Kubernetes (EKS/GKE)</li>
+              <li>Linux</li>
+              <li>Windows</li>
+            </ul>
           </div>
-          <div>
+
+          <div class="skill-group">
             <h3>CI/CD &amp; GitOps</h3>
-            <p>ArgoCD, Jenkins, Git, GitHub, Bitbucket, Maven</p>
+            <ul class="tag-list">
+              <li>ArgoCD</li>
+              <li>Jenkins</li>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Bitbucket</li>
+              <li>Maven</li>
+            </ul>
           </div>
-          <div>
+
+          <div class="skill-group">
             <h3>IaC &amp; Scripting</h3>
-            <p>Terraform, Ansible, Python, Groovy, Shell, YAML, JSON, Helm</p>
+            <ul class="tag-list">
+              <li>Terraform</li>
+              <li>Ansible</li>
+              <li>Python</li>
+              <li>Groovy</li>
+              <li>Shell</li>
+              <li>YAML</li>
+              <li>JSON</li>
+              <li>Helm</li>
+            </ul>
           </div>
-          <div>
+
+          <div class="skill-group">
             <h3>Observability &amp; Quality</h3>
-            <p>Datadog, Grafana, Prometheus, Trivy, Checkov, SonarQube, Codacy, Jira, Confluence</p>
+            <ul class="tag-list">
+              <li>Datadog</li>
+              <li>Grafana</li>
+              <li>Prometheus</li>
+              <li>Trivy</li>
+              <li>Checkov</li>
+              <li>SonarQube</li>
+              <li>Codacy</li>
+              <li>Jira</li>
+              <li>Confluence</li>
+            </ul>
           </div>
         </div>
 
